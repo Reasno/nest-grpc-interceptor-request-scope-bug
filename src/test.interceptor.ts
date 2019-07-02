@@ -5,12 +5,12 @@ import * as assert from 'assert';
 @Injectable({scope: Scope.REQUEST})
 export class TestInterceptor implements NestInterceptor {
   constructor(
-    @Inject('TEST') private readonly requestInfo: string,
+    @Inject('REQUEST_ID') private readonly requestId: string
   ) {
   }
   intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
-    //This variable should be 'test' but it is not!!
-    assert.equal(this.requestInfo, 'test', 'dependency injection not working!');
+    //This variable should be a request id, but it is undefined!!
+    assert.notStrictEqual(this.requestId, undefined, 'dependency injection not working!');
     return next.handle();
   }
 }

@@ -11,7 +11,7 @@ interface HeroService {
 }
 
 @Controller()
-export class HeroController implements OnModuleInit {
+export class HeroController{
   @UseInterceptors(TestInterceptor)
   @GrpcMethod('HeroService')
   findOne(data: HeroById): Hero {

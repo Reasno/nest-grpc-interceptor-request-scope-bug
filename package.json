@@ -14,7 +14,7 @@
     "@nestjs/common": "6.4.0",
     "@nestjs/core": "6.4.0",
     "@nestjs/microservices": "6.4.0",
-    "@nestjs/platform-express": "^6.4.0",
+    "@nestjs/platform-express": "^9.2.1",
     "@nestjs/testing": "6.4.0",
     "class-transformer": "0.2.3",
     "class-validator": "0.9.1",
